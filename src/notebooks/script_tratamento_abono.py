@@ -31,5 +31,6 @@ def tratamento_abono(filename):
     'UF_residencia', 'cidade_residencia', 'situacao']
 
     df = strip_dataframe(df, string_columns)
+    df = df.drop_duplicates()
 
     return df

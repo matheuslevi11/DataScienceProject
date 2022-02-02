@@ -54,6 +54,10 @@ def tratamento_aposentados(filename):
 
     df['data_aposentadoria'] = df['data_aposentadoria'].dt.date
     df['data_ingresso'] = df['data_ingresso'].dt.date
+
+    df = df.drop_duplicates()
+    df = df.drop('ato_aposentadoria', axis=1)
+    
     return df
 
 
